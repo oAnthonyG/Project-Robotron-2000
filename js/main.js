@@ -1,7 +1,18 @@
-const fuiClicado = document.querySelector('#calcular')
+const braco = document.querySelector('#braco')
+const subtrair = document.querySelector('#subtrair')
+const somar = document.querySelector('#somar')
+
+const controle = document.querySelectorAll('.controle-ajuste')
 
 
-fuiClicado.addEventListener('click', () => {
+somar.addEventListener('click', ()=>{manipulaDados('somar')})
 
-    console.log('Fui clicado')
-} )
+subtrair.addEventListener('click', ()=>{manipulaDados('subtrair')})
+
+function manipulaDados(operacao){
+    if(operacao === 'subtrair'){
+        braco.value = parseInt(braco.value) -1
+    }else {
+        braco.value = parseInt(braco.value) + 1
+    }
+}
